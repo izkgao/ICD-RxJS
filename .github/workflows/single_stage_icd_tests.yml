@@ -40,7 +40,7 @@ jobs:
         include:
           - os_version: macOS-14
             os: macos
-            runner: ZKs-Mac-mini
+            runner: [self-hosted, macOS, X64]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
