@@ -93,6 +93,7 @@ jobs:
         run: |
           echo $CC
           echo $CXX
+          echo $PATH
           SRC_DIR=$GITHUB_WORKSPACE/source
           BUILD_DIR=$GITHUB_WORKSPACE/build
           cd $SRC_DIR && git submodule update --init --recursive
