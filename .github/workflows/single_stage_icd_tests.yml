@@ -72,7 +72,8 @@ jobs:
             -DCMAKE_BUILD_TYPE=Debug \
             -DDevSuppressExternalWarnings=ON \
             -DCMAKE_CXX_FLAGS='-O0 -g -fsanitize=address -fno-omit-frame-pointer' \
-            -DCMAKE_EXE_LINKER_FLAGS='-fsanitize=address'
+            -DCMAKE_EXE_LINKER_FLAGS='-fsanitize=address' \
+            $(if [ -n "$RANLIB" ]; then echo "-DCMAKE_RANLIB=$RANLIB"; fi)
           make -j 16
 
       - name: Check backend runs (macOS)
