@@ -46,7 +46,7 @@ jobs:
             runner: [macOS-13, ICD]
           - os_version: macOS-14
             os: macos
-            runner: [macOS-14, ICD]
+            runner: [self-hosted, macOS, X64]
           - os_version: macOS-15
             os: macos
             runner: [macOS-15, ICD]
