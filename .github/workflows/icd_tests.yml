@@ -48,34 +48,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os_version: macOS-12
+          - os_version: macOS-14
             os: macos
-            runner: [macOS-12, ICD]
-          - os_version: ubuntu-20.04
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD1]
-            image: /opt/apptainer/ubuntu-2004-dec2023.sif
-            port: 9001
-          - os_version: ubuntu-22.04
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD2]
-            image: /opt/apptainer/ubuntu-2204-dec2023.sif
-            port: 9002
-          - os_version: rhel-7
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD3]
-            image: /opt/apptainer/centos7-dec2023.sif
-            port: 9003
-          - os_version: rhel-8
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD4]
-            image: /opt/apptainer/almalinux8-dec2023.sif
-            port: 9004
-          - os_version: rhel-9
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD5]
-            image: /opt/apptainer/almalinux9-dec2023.sif
-            port: 9005
+            runner: [self-hosted, macOS, X64]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -149,34 +124,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os_version: macOS-12
+          - os_version: macOS-14
             os: macos
-            runner: [macOS-12, ICD]
-          - os_version: ubuntu-20.04
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD1]
-            image: /opt/apptainer/ubuntu-2004-dec2023.sif
-            port: 9001
-          - os_version: ubuntu-22.04
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD2]
-            image: /opt/apptainer/ubuntu-2204-dec2023.sif
-            port: 9002
-          - os_version: rhel-7
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD3]
-            image: /opt/apptainer/centos7-dec2023.sif
-            port: 9003
-          - os_version: rhel-8
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD4]
-            image: /opt/apptainer/almalinux8-dec2023.sif
-            port: 9004
-          - os_version: rhel-9
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD5]
-            image: /opt/apptainer/almalinux9-dec2023.sif
-            port: 9005
+            runner: [self-hosted, macOS, X64]
     needs: Build              
     steps:
       - name: Checkout
@@ -228,34 +178,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os_version: macOS-12
+          - os_version: macOS-14
             os: macos
-            runner: [macOS-12, ICD]
-          - os_version: ubuntu-20.04
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD1]
-            image: /opt/apptainer/ubuntu-2004-dec2023.sif
-            port: 9001
-          - os_version: ubuntu-22.04
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD2]
-            image: /opt/apptainer/ubuntu-2204-dec2023.sif
-            port: 9002
-          - os_version: rhel-7
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD3]
-            image: /opt/apptainer/centos7-dec2023.sif
-            port: 9003
-          - os_version: rhel-8
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD4]
-            image: /opt/apptainer/almalinux8-dec2023.sif
-            port: 9004
-          - os_version: rhel-9
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD5]
-            image: /opt/apptainer/almalinux9-dec2023.sif
-            port: 9005
+            runner: [self-hosted, macOS, X64]
     needs: [Build, Prepare-ICD-RxJS]
     if: ${{ github.event.inputs.file_browser_animator_icd_tests == 'true' }} 
     steps:
@@ -283,34 +208,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os_version: macOS-12
+          - os_version: macOS-14
             os: macos
-            runner: [macOS-12, ICD]
-          - os_version: ubuntu-20.04
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD1]
-            image: /opt/apptainer/ubuntu-2004-dec2023.sif
-            port: 9001
-          - os_version: ubuntu-22.04
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD2]
-            image: /opt/apptainer/ubuntu-2204-dec2023.sif
-            port: 9002
-          - os_version: rhel-7
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD3]
-            image: /opt/apptainer/centos7-dec2023.sif
-            port: 9003
-          - os_version: rhel-8
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD4]
-            image: /opt/apptainer/almalinux8-dec2023.sif
-            port: 9004
-          - os_version: rhel-9
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD5]
-            image: /opt/apptainer/almalinux9-dec2023.sif
-            port: 9005
+            runner: [self-hosted, macOS, X64]
     needs: [Build, Prepare-ICD-RxJS]
     if: ${{ github.event.inputs.file_browser_animator_icd_tests == 'true' }} 
     steps:
@@ -338,34 +238,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os_version: macOS-12
+          - os_version: macOS-14
             os: macos
-            runner: [macOS-12, ICD]
-          - os_version: ubuntu-20.04
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD1]
-            image: /opt/apptainer/ubuntu-2004-dec2023.sif
-            port: 9001
-          - os_version: ubuntu-22.04
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD2]
-            image: /opt/apptainer/ubuntu-2204-dec2023.sif
-            port: 9002
-          - os_version: rhel-7
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD3]
-            image: /opt/apptainer/centos7-dec2023.sif
-            port: 9003
-          - os_version: rhel-8
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD4]
-            image: /opt/apptainer/almalinux8-dec2023.sif
-            port: 9004
-          - os_version: rhel-9
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD5]
-            image: /opt/apptainer/almalinux9-dec2023.sif
-            port: 9005
+            runner: [self-hosted, macOS, X64]
     needs: [Build, Prepare-ICD-RxJS]
     if: ${{ github.event.inputs.region_statistics_manipulation_icd_tests == 'true' }}
     steps:
@@ -393,34 +268,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os_version: macOS-12
+          - os_version: macOS-14
             os: macos
-            runner: [macOS-12, ICD]
-          - os_version: ubuntu-20.04
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD1]
-            image: /opt/apptainer/ubuntu-2004-dec2023.sif
-            port: 9001
-          - os_version: ubuntu-22.04
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD2]
-            image: /opt/apptainer/ubuntu-2204-dec2023.sif
-            port: 9002
-          - os_version: rhel-7
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD3]
-            image: /opt/apptainer/centos7-dec2023.sif
-            port: 9003
-          - os_version: rhel-8
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD4]
-            image: /opt/apptainer/almalinux8-dec2023.sif
-            port: 9004
-          - os_version: rhel-9
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD5]
-            image: /opt/apptainer/almalinux9-dec2023.sif
-            port: 9005
+            runner: [self-hosted, macOS, X64]
     needs: [Build, Prepare-ICD-RxJS]
     if: ${{ github.event.inputs.region_statistics_manipulation_icd_tests == 'true' }}
     steps:
@@ -448,34 +298,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os_version: macOS-12
+          - os_version: macOS-14
             os: macos
-            runner: [macOS-12, ICD]
-          - os_version: ubuntu-20.04
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD1]
-            image: /opt/apptainer/ubuntu-2004-dec2023.sif
-            port: 9001
-          - os_version: ubuntu-22.04
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD2]
-            image: /opt/apptainer/ubuntu-2204-dec2023.sif
-            port: 9002
-          - os_version: rhel-7
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD3]
-            image: /opt/apptainer/centos7-dec2023.sif
-            port: 9003
-          - os_version: rhel-8
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD4]
-            image: /opt/apptainer/almalinux8-dec2023.sif
-            port: 9004
-          - os_version: rhel-9
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD5]
-            image: /opt/apptainer/almalinux9-dec2023.sif
-            port: 9005
+            runner: [self-hosted, macOS, X64]
     needs: [Build, Prepare-ICD-RxJS]
     if: ${{ github.event.inputs.cube_histogram_pv_generator_icd_tests == 'true' }}
     steps:
@@ -503,34 +328,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os_version: macOS-12
+          - os_version: macOS-14
             os: macos
-            runner: [macOS-12, ICD]
-          - os_version: ubuntu-20.04
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD1]
-            image: /opt/apptainer/ubuntu-2004-dec2023.sif
-            port: 9001
-          - os_version: ubuntu-22.04
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD2]
-            image: /opt/apptainer/ubuntu-2204-dec2023.sif
-            port: 9002
-          - os_version: rhel-7
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD3]
-            image: /opt/apptainer/centos7-dec2023.sif
-            port: 9003
-          - os_version: rhel-8
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD4]
-            image: /opt/apptainer/almalinux8-dec2023.sif
-            port: 9004
-          - os_version: rhel-9
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD5]
-            image: /opt/apptainer/almalinux9-dec2023.sif
-            port: 9005
+            runner: [self-hosted, macOS, X64]
     needs: [Build, Prepare-ICD-RxJS]
     if: ${{ github.event.inputs.cube_histogram_pv_generator_icd_tests == 'true' }}
     steps:
@@ -558,34 +358,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os_version: macOS-12
+          - os_version: macOS-14
             os: macos
-            runner: [macOS-12, ICD]
-          - os_version: ubuntu-20.04
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD1]
-            image: /opt/apptainer/ubuntu-2004-dec2023.sif
-            port: 9001
-          - os_version: ubuntu-22.04
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD2]
-            image: /opt/apptainer/ubuntu-2204-dec2023.sif
-            port: 9002
-          - os_version: rhel-7
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD3]
-            image: /opt/apptainer/centos7-dec2023.sif
-            port: 9003
-          - os_version: rhel-8
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD4]
-            image: /opt/apptainer/almalinux8-dec2023.sif
-            port: 9004
-          - os_version: rhel-9
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD5]
-            image: /opt/apptainer/almalinux9-dec2023.sif
-            port: 9005
+            runner: [self-hosted, macOS, X64]
     needs: [Build, Prepare-ICD-RxJS]
     if: ${{ github.event.inputs.raster_tiles_catalog_icd_tests == 'true' }}
     steps:
@@ -613,34 +388,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os_version: macOS-12
+          - os_version: macOS-14
             os: macos
-            runner: [macOS-12, ICD]
-          - os_version: ubuntu-20.04
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD1]
-            image: /opt/apptainer/ubuntu-2004-dec2023.sif
-            port: 9001
-          - os_version: ubuntu-22.04
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD2]
-            image: /opt/apptainer/ubuntu-2204-dec2023.sif
-            port: 9002
-          - os_version: rhel-7
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD3]
-            image: /opt/apptainer/centos7-dec2023.sif
-            port: 9003
-          - os_version: rhel-8
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD4]
-            image: /opt/apptainer/almalinux8-dec2023.sif
-            port: 9004
-          - os_version: rhel-9
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD5]
-            image: /opt/apptainer/almalinux9-dec2023.sif
-            port: 9005
+            runner: [self-hosted, macOS, X64]
     needs: [Build, Prepare-ICD-RxJS]
     if: ${{ github.event.inputs.raster_tiles_catalog_icd_tests == 'true' }}
     steps:
@@ -668,34 +418,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os_version: macOS-12
+          - os_version: macOS-14
             os: macos
-            runner: [macOS-12, ICD]
-          - os_version: ubuntu-20.04
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD1]
-            image: /opt/apptainer/ubuntu-2004-dec2023.sif
-            port: 9001
-          - os_version: ubuntu-22.04
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD2]
-            image: /opt/apptainer/ubuntu-2204-dec2023.sif
-            port: 9002
-          - os_version: rhel-7
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD3]
-            image: /opt/apptainer/centos7-dec2023.sif
-            port: 9003
-          - os_version: rhel-8
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD4]
-            image: /opt/apptainer/almalinux8-dec2023.sif
-            port: 9004
-          - os_version: rhel-9
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD5]
-            image: /opt/apptainer/almalinux9-dec2023.sif
-            port: 9005
+            runner: [self-hosted, macOS, X64]
     needs: [Build, Prepare-ICD-RxJS]
     if: ${{ github.event.inputs.moment_match_icd_tests == 'true' }}            
     steps:
@@ -723,34 +448,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os_version: macOS-12
+          - os_version: macOS-14
             os: macos
-            runner: [macOS-12, ICD]
-          - os_version: ubuntu-20.04
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD1]
-            image: /opt/apptainer/ubuntu-2004-dec2023.sif
-            port: 9001
-          - os_version: ubuntu-22.04
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD2]
-            image: /opt/apptainer/ubuntu-2204-dec2023.sif
-            port: 9002
-          - os_version: rhel-7
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD3]
-            image: /opt/apptainer/centos7-dec2023.sif
-            port: 9003
-          - os_version: rhel-8
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD4]
-            image: /opt/apptainer/almalinux8-dec2023.sif
-            port: 9004
-          - os_version: rhel-9
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD5]
-            image: /opt/apptainer/almalinux9-dec2023.sif
-            port: 9005
+            runner: [self-hosted, macOS, X64]
     needs: [Build, Prepare-ICD-RxJS]
     if: ${{ github.event.inputs.moment_match_icd_tests == 'true' }}
     steps:
@@ -778,34 +478,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os_version: macOS-12
+          - os_version: macOS-14
             os: macos
-            runner: [macOS-12, ICD]
-          - os_version: ubuntu-20.04
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD1]
-            image: /opt/apptainer/ubuntu-2004-dec2023.sif
-            port: 9001
-          - os_version: ubuntu-22.04
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD2]
-            image: /opt/apptainer/ubuntu-2204-dec2023.sif
-            port: 9002
-          - os_version: rhel-7
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD3]
-            image: /opt/apptainer/centos7-dec2023.sif
-            port: 9003
-          - os_version: rhel-8
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD4]
-            image: /opt/apptainer/almalinux8-dec2023.sif
-            port: 9004
-          - os_version: rhel-9
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD5]
-            image: /opt/apptainer/almalinux9-dec2023.sif
-            port: 9005
+            runner: [self-hosted, macOS, X64]
     needs: [Build, Prepare-ICD-RxJS]
     if: ${{ github.event.inputs.close_files_image_fitting_icd_tests == 'true' }}
     steps:
@@ -833,34 +508,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os_version: macOS-12
+          - os_version: macOS-14
             os: macos
-            runner: [macOS-12, ICD]
-          - os_version: ubuntu-20.04
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD1]
-            image: /opt/apptainer/ubuntu-2004-dec2023.sif
-            port: 9001
-          - os_version: ubuntu-22.04
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD2]
-            image: /opt/apptainer/ubuntu-2204-dec2023.sif
-            port: 9002
-          - os_version: rhel-7
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD3]
-            image: /opt/apptainer/centos7-dec2023.sif
-            port: 9003
-          - os_version: rhel-8
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD4]
-            image: /opt/apptainer/almalinux8-dec2023.sif
-            port: 9004
-          - os_version: rhel-9
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD5]
-            image: /opt/apptainer/almalinux9-dec2023.sif
-            port: 9005
+            runner: [self-hosted, macOS, X64]
     needs: [Build, Prepare-ICD-RxJS]
     if: ${{ github.event.inputs.close_files_image_fitting_icd_tests == 'true' }}
     steps:
@@ -888,34 +538,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os_version: macOS-12
+          - os_version: macOS-14
             os: macos
-            runner: [macOS-12, ICD]
-          - os_version: ubuntu-20.04
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD1]
-            image: /opt/apptainer/ubuntu-2004-dec2023.sif
-            port: 9001
-          - os_version: ubuntu-22.04
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD2]
-            image: /opt/apptainer/ubuntu-2204-dec2023.sif
-            port: 9002
-          - os_version: rhel-7
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD3]
-            image: /opt/apptainer/centos7-dec2023.sif
-            port: 9003
-          - os_version: rhel-8
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD4]
-            image: /opt/apptainer/almalinux8-dec2023.sif
-            port: 9004
-          - os_version: rhel-9
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD5]
-            image: /opt/apptainer/almalinux9-dec2023.sif
-            port: 9005
+            runner: [self-hosted, macOS, X64]
     needs: [Build, Prepare-ICD-RxJS]
     if: ${{ github.event.inputs.vector_overlay_resume_icd_tests == 'true' }}
     steps:
@@ -943,34 +568,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os_version: macOS-12
+          - os_version: macOS-14
             os: macos
-            runner: [macOS-12, ICD]
-          - os_version: ubuntu-20.04
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD1]
-            image: /opt/apptainer/ubuntu-2004-dec2023.sif
-            port: 9001
-          - os_version: ubuntu-22.04
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD2]
-            image: /opt/apptainer/ubuntu-2204-dec2023.sif
-            port: 9002
-          - os_version: rhel-7
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD3]
-            image: /opt/apptainer/centos7-dec2023.sif
-            port: 9003
-          - os_version: rhel-8
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD4]
-            image: /opt/apptainer/almalinux8-dec2023.sif
-            port: 9004
-          - os_version: rhel-9
-            os: linux
-            runner: [self-hosted, Linux, Apptainer, ICD5]
-            image: /opt/apptainer/almalinux9-dec2023.sif
-            port: 9005
+            runner: [self-hosted, macOS, X64]
     needs: [Build, Prepare-ICD-RxJS]
     if: ${{ github.event.inputs.vector_overlay_resume_icd_tests == 'true' }}
     steps:
